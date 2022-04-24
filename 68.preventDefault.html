@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+
+    </head>
+    <body>
+        <a href="https://tw.yahoo.com" onclick="myClick(event)">yahoo</a>
+        <a href="https://www.pchome.com.tw/" onclick="return confirm('是否要到pchome?')">pchome</a>
+        <a href="javascript: myClick2()" >fake</a>
+        <script src="js/jquery-3.6.0.js"></script>
+        <script>
+            function myClick(event){
+                console.log('123')
+                if(! confirm('是否要到雅虎?')){
+                    event.prevetDefault();
+                }
+            }
+            function myClick2(){
+                console.log('456')
+            }
+
+        </script>
+    </body>
+</html>

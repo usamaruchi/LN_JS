@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+
+    </style>
+</head>
+
+<body>
+
+    <div class="even"></div>
+    <div class="odd"></div>
+
+    <script src="js/jquery-3.6.0.js"></script>
+    <script>
+
+        const eventotle = document.querySelector('.even');
+        const oddtotle = document.querySelector('.odd');
+
+        let num = 4;
+        for (let i = 0; i < 12; i++) {
+            // x 餘
+            const x = i % num
+            const y = parseInt(i / num);
+            console.log('x =', x, ',', 'y =', y);
+        }
+
+        //0~100奇數與偶數的和
+        let odd = 0;
+        let even = 0;
+
+        for (let i = 0; i <= 100; i++) {
+            if (i % 2 == 0) {
+                even = even + i;
+                eventotle.innerHTML = `0~100中偶數的總和為：${even}`;
+            } else {
+                odd = odd + i;
+                oddtotle.innerHTML = `0~100中奇數的總和為：${odd}`;
+            }
+
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //從陣列中取得大於30的數值
+
+        //方法一，清楚理解，寫法多一些
+        var arr = [1, 55, 10, 8, 29, 33, 39, 21];
+        var newArr = [];
+        var j =0 //設定一個從0開始的變數，來存取舊的陣列中大於30的數值
+        for (var i = 0; i < arr.length; i++) {
+            if (arr[i] > 30) {
+                newArr[j] = arr[i];
+                j++
+            }
+        }
+        console.log(newArr);
+
+         //方法二，較難理解，寫法簡單
+        var arr = [1, 55, 10, 8, 29, 33, 39, 21];
+        var newArr2 = [];
+        for (var i = 0; i < arr.length; i++) {
+            if (arr[i] > 30) {
+                newArr2[newArr2.length] = arr[i]; //從新的陣列中判斷長度，並存放新的數值來改變自身長度
+            }
+        }
+        console.log(newArr2);
+
+    </script>
+</body>
+
+</html>

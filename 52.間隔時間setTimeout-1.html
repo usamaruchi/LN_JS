@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+</head>
+
+<body>
+
+    <script src="js/jquery-3.6.0.js"></script>
+    <script>
+
+        let i = 0;
+
+        // 箭頭函式表示
+        const run = () => {
+            console.log(++i);
+             // 每1000毫秒觸發一次，來達成循環
+            setTimeout(run, 1000)
+        }
+        run();
+
+
+        //一般函式表示
+        // let j =0;
+        // function run2(){
+        //     setTimeout(run, 2000)
+
+        //     console.log(++j);
+        // }
+        // run2();
+
+    </script>
+</body>
+
+</html>

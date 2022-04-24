@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        //談輸出入框輸入班級總人數
+        //依次輸入學生的成績（保存起來 score）
+        //for循環，彈出的次數跟班級總人數，條件表達 i<=num
+        //計算成績，總成績sum，平均average
+        //彈出結果
+        var num = prompt('請輸入班級總人數：'); //人數
+        var sum = 0; //總和
+        var average = 0; //平均
+
+        for (var i = 1; i <= num; i++) {
+            const score = prompt(`請輸入第${i}個學生成績`);
+            sum = sum + parseFloat(score);
+        }
+        average = sum / num;
+        alert(`全班${num}人的加總分數為${sum}分，平均為${average}分`);
+
+    </script>
+</body>
+
+</html>

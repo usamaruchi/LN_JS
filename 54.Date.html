@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+    </head>
+    <body>
+
+        <div id="timeshow"></div>
+
+        <script src="js/jquery-3.6.0.js"></script>
+        <script>
+            // 建立
+            console.log(new Date());
+            console.log(new Date);
+            console.log(new Date(2022, 4, 12));
+            console.log(new Date(2022, 4, 12, 10, 39, 1));
+            console.log(new Date('2022-04-12'));
+            console.log(new Date('2022-04-12 08:06:20'));
+            const now = new Date;
+
+            console.log(now.getFullYear());
+            console.log(now.getMonth());
+            console.log(now.getDate()); // 幾號
+            console.log(now.getDay()); // 星期幾
+            console.log(now.getTime()); // 1970算起
+            const t = (new Date('2022-06-07')) - Date.now();
+            console.log(t/86400000); 
+
+            const d2 = new Date();
+            d2.setDate(1);
+            console.log(d2.getDay()); // 當月的一號是星期幾
+
+
+        </script>
+    </body>
+</html>

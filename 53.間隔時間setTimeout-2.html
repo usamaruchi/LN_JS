@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+</head>
+
+<body>
+
+    <script src="js/jquery-3.6.0.js"></script>
+    <script>
+
+        let n = 0;
+
+        //使用var會等於一次跑完 k到指定數量，除非在外面設一組新的變數
+        for (var k = 0; k < 8; k++) {
+            setTimeout(function () {
+                console.log(k, n++);
+            }, 1000 * k);
+        }
+
+        // 自行解析：正常情況下會同時出現，而使用1000*i 會讓後面的console.log比較晚執行，達成延遲效果
+        // for (let i = 0; i < 8; i++) {
+        //     setTimeout(function () {
+        //         console.log({i});
+        //     }, 1000 * i);
+        // }
+
+    </script>
+</body>
+
+</html>

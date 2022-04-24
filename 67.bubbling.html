@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            .rect {
+                position: relative;
+                width: 800px;
+                height: 600px;
+                border: 1px solid black;
+                background-color: rgb(207, 228, 249);
+            }
+            .rect2 {
+                position: absolute;
+                width: 400px;
+                height: 400px;
+                border: 1px solid black;
+                background-color: rgb(199, 244, 100);
+                left: 50px;
+                top: 50px;
+            }
+            .ball {
+                position: absolute;
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                border: 1px solid black;
+                background-color: rgb(252, 80, 46);
+                color: white;
+                font-weight: 600;
+                text-align: center;
+                line-height: 50px;
+                left: 50px;
+                top: 50px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="rect">
+            <div class="rect2">
+                <div class="ball">test</div>
+            </div>
+        </div>
+        <script src="js/jquery-3.6.0.js"></script>
+        <script>
+            const rect = document.querySelector('.rect');
+            const rect2 = document.querySelector('.rect2');
+            const ball = document.querySelector('.ball');
+
+            const handler = event=>{
+                console.log(event.target, event.currentTarget);
+            };
+
+            /* 偵聽(at target, bubbling)的時期 */
+            // 1. capturing, 2. at target, 3. bubbling
+            rect.addEventListener('click', event=>{
+                console.log('a:', event.target, event.currentTarget, event.eventPhase);
+            });
+            rect2.addEventListener('click', event=>{
+                console.log('b:',event.target, event.currentTarget, event.eventPhase);
+            });
+            ball.addEventListener('click', event=>{
+                console.log('c:',event.target, event.currentTarget, event.eventPhase);
+            });
+
+            /* 偵聽(capturing, at target)的時期 */
+            rect.addEventListener('click', event=>{
+                console.log('d:', event.target, event.currentTarget, event.eventPhase);
+                event.stopPropagation(); // 阻斷,事件物件不會往下傳遞
+            }, true);
+            rect2.addEventListener('click', event=>{
+                console.log('e:',event.target, event.currentTarget, event.eventPhase);
+            }, true);
+            ball.addEventListener('click', event=>{
+                console.log('f:',event.target, event.currentTarget, event.eventPhase);
+            }, true);
+
+        </script>
+    </body>
+</html>
