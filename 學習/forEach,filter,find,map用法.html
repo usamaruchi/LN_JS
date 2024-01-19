@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Array</title>
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+    integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+  <!-- CSS -->
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      /* outline: 1px solid red; */
+    }
+
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <div></div>
+    </div>
+  </div>
+  <!-- JQ -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <!-- Js -->
+  <script>
+    let people = [
+      {
+        name: 'Jay',
+        like: 'apple',
+        gender: 'male',
+        age: '18'
+      },
+      {
+        name: 'Sarah',
+        like: 'banana',
+        gender: 'female',
+        age: '24'
+      },
+      {
+        name: 'Tom',
+        like: 'orange',
+        gender: 'male',
+        age: '1'
+      },
+      {
+        name: 'Jacky',
+        like: 'orange',
+        gender: 'female',
+        age: '3'
+      },
+    ]
+
+    // forEach()方法會建立一個經指定之函式運算後，由原陣列中通過該函式檢驗之元素所構成的新陣列。
+    // 語法:var newArray = arr.forEach(callback(element[,index[, array]])[,thisArg])
+    // people.forEach(function (person, index) {
+    //   console.log(`${person.name} like ${person.like}`)
+    // });
+
+
+    // filter可以事先塞選後，再找出陣列
+    // let ageThan5 = people.filter(function (person, index) {
+    //   return person.age >= 5
+    // })
+    // console.log(ageThan5)
+
+
+    // //fine()方法會回傳第一個滿足所提供之測試函式的元素值。否則回傳undefined
+    // let findAgeThan5 = people.find(function (person, index) {
+    //   return person.age >= 5
+    // })
+    // // 找到Jay後停止
+    // console.log(findAgeThan5)
+
+
+    // map()方法會建立一個新的陣列，其內容為原陣列的每一個元素經由回呼函式運算後所回傳的新陣列
+    // let personLike = people.map(function (person, index) {
+    //   if (person.like == "orange") {
+    //     return `${person.name} like orange.`;
+    //   } else {
+    //     return `${person.name} does't like orange.`;
+    //   }
+    // })
+    // console.log(personLike)
+
+  </script>
+</body>
+
+</html>
